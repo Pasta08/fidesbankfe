@@ -15,9 +15,16 @@ const UserSignIn = () => {
     setFormData((prevValue) => {
       return {
         ...prevValue,
-        [name]: value
+        [name]: value,
       };
-  });
+      console.log(formData);
+    });
+  }
+
+  function onSubmit(event: any) {
+    event.prevenDefault();
+    console.log(formData);
+  }
 
   return (
     <div>

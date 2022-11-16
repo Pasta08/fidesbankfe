@@ -16,7 +16,7 @@ const Home = () => {
             User LogIn
           </Link>
         </div>
-        <Link to="/">Register</Link>
+        <Link to="/usersignin">Register</Link>
       </div>
     </Layout>
   );
