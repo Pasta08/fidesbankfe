@@ -1,17 +1,17 @@
-import "./App.css";
+import "./Styles/App.css";
 import Home from "./pages/Home";
-import OperatorSignIn from "./pages/OperatorSignIn";
-import UserSignIn from "./pages/UserSignIn";
+import OperatorLogIn from "./pages/OperatorLogIn";
+import UserLogIn from "./pages/UserLogIn";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/operatorsignin" element={<OperatorSignIn />} />
-        <Route path="/usersignin" element={<UserSignIn />} />
+        <Route path="/operatorlogin" element={<OperatorLogIn />} />
+        <Route path="/userlogin" element={<UserLogIn />} />
       </Routes>
     </div>
   );

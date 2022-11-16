@@ -1,17 +1,7 @@
-import {FC, ReactNode} from 'react';
+import { FC, ReactNode } from "react";
 
-const Layout: FC<{children: ReactNode}> = ({children}) => {
-    return (
-        <>
-        <div>
-            NavBar
-        </div>
-        {children}
-        <div>
-            Footer
-        </div>
-        </>
-    )
-}
+const Layout: FC<{ children: ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
 
 export default Layout;
