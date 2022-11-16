@@ -12,7 +12,12 @@ const UserSignIn = () => {
 
   function handleChange(event: any) {
     const { name, value } = event.target;
-  }
+    setFormData((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value
+      };
+  });
 
   return (
     <div>
