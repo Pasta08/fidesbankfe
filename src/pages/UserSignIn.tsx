@@ -7,20 +7,47 @@ const UserSignIn = () => {
     address: "",
     email: "",
     password: "",
-    confirmPassword: "",
     dateOfBirth: "",
   });
+
+  function handleChange(event: any) {
+    const { name, value } = event.target;
+  }
 
   return (
     <div>
       <form className="form" autoComplete="off">
         <input
           type="text"
-          className="form--username"
-          placeholder="Username"
-          name="Username"
+          className="form--firstname"
+          placeholder="Firstname"
+          name="Firstname"
           onChange={handleChange}
-          value={formData.Username}
+          value={formData.firstName}
+        />
+        <input
+          type="text"
+          className="form--lastname"
+          placeholder="Lastname"
+          name="Lastname"
+          onChange={handleChange}
+          value={formData.lastName}
+        />
+        <input
+          type="text"
+          className="form--address"
+          placeholder="Address"
+          name="Address"
+          onChange={handleChange}
+          value={formData.address}
+        />
+        <input
+          type="text"
+          className="form--email"
+          placeholder="Email"
+          name="Email"
+          onChange={handleChange}
+          value={formData.email}
         />
         <input
           type="password"
@@ -28,31 +55,19 @@ const UserSignIn = () => {
           placeholder="Password"
           name="Password"
           onChange={handleChange}
-          value={formData.Password}
+          value={formData.password}
         />
         <input
-          type="password"
-          className="form--password"
-          placeholder="Confirm Password"
-          name="confirmPassword"
+          type="date"
+          className="form--dateofbirth"
+          name="Dateofbirth"
           onChange={handleChange}
-          value={formData.confirmPassword}
+          value={formData.dateOfBirth}
         />
 
         <button className="login--button" onClick={onSubmit}>
-          {" "}
-          <FontAwesomeIcon icon={faCheck} className="check" />
+          submit
         </button>
-        <div className="form--check">
-          <input
-            type="checkbox"
-            id="toRemember"
-            checked={formData.toRemember}
-            onChange={handleChange}
-            name="toRemember"
-          />
-          <label htmlFor="toRemember">Sign Up to news letter?</label>
-        </div>
       </form>
     </div>
   );
