@@ -1,30 +1,33 @@
 import React, { useState } from "react";
-
+import type { FormEvent } from "react";
 const UserSignIn = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    address: "",
-    email: "",
-    password: "",
-    dateOfBirth: "",
-  });
+  const sendForm = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  function handleChange(event: any) {
-    const { name, value } = event.target;
-    setFormData((prevValue) => {
-      return {
-        ...prevValue,
-        [name]: value,
+    const { firstname, lastname, address, email, password, dateofbirth } =
+      event.target as typeof event.target & {
+        firstname: { value: string };
+        lastname: { value: string };
+        address: { value: string };
+        email: { value: string };
+        password: { value: string };
+        dateofbirth: { value: Date };
       };
-      console.log(formData);
+    await fetch("/usersignin", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        firstname: firstname.value,
+        lastname: lastname.value,
+        address: address.value,
+        email: email.value,
+        password: password.value,
+        dateofbirth: dateofbirth.value,
+      }),
     });
-  }
-
-  function onSubmit(event: any) {
-    event.prevenDefault();
-    console.log(formData);
-  }
+  };
 
   return (
     <div>
@@ -33,53 +36,35 @@ const UserSignIn = () => {
           type="text"
           className="form--firstname"
           placeholder="Firstname"
-          name="Firstname"
-          onChange={handleChange}
-          value={formData.firstName}
+          name="firstname"
         />
         <input
           type="text"
           className="form--lastname"
           placeholder="Lastname"
-          name="Lastname"
-          onChange={handleChange}
-          value={formData.lastName}
+          name="lastname"
         />
         <input
           type="text"
           className="form--address"
           placeholder="Address"
-          name="Address"
-          onChange={handleChange}
-          value={formData.address}
+          name="address"
         />
         <input
           type="text"
           className="form--email"
           placeholder="Email"
-          name="Email"
-          onChange={handleChange}
-          value={formData.email}
+          name="email"
         />
         <input
           type="password"
           className="form--password"
           placeholder="Password"
-          name="Password"
-          onChange={handleChange}
-          value={formData.password}
+          name="password"
         />
-        <input
-          type="date"
-          className="form--dateofbirth"
-          name="Dateofbirth"
-          onChange={handleChange}
-          value={formData.dateOfBirth}
-        />
+        <input type="date" className="form--dateofbirth" name="dateofbirth" />
 
-        <button className="login--button" onClick={onSubmit}>
-          submit
-        </button>
+        <button className="login--button">submit</button>
       </form>
     </div>
   );
