@@ -1,8 +1,9 @@
-import bankImage from "/images/HousingAffordability.svg";
-import bankImage2 from "/images/TransactionalSms.svg";
 import React, { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import type { FormEvent } from "react";
 import "../Styles/UserSignIn.css";
+import { Link } from "react-router-dom";
+import Layout from "../components/common/Layout";
 const UserSignIn = () => {
   const sendForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,7 +35,11 @@ const UserSignIn = () => {
 
   return (
     <div className="form_page">
-      <div className="form_image"></div>
+      <div className="form_image">
+        <h1>FIDESBANK</h1>
+        <img src="/images/HousingAffordability.svg" alt="image" />
+        <Link to="/"> </Link>
+      </div>
       <form className="form" autoComplete="off" onSubmit={sendForm}>
         <h1 className="form_title">User SignIn</h1>
         <input
@@ -59,8 +64,8 @@ const UserSignIn = () => {
         />
 
         <input
-          type="text"
-          className="input "
+          type="email"
+          className="input email"
           placeholder="Email"
           name="email"
         />
@@ -74,7 +79,7 @@ const UserSignIn = () => {
 
         <input type="date" className="input " name="dateofbirth" />
 
-        <button className="login--button" type="submit">
+        <button className="form_submit_btn" type="submit">
           submit
         </button>
       </form>

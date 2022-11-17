@@ -10,6 +10,17 @@ $main-title-darkgrey: rgb(82, 82, 82);
   .form_image {
     width: 50%;
     background: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      color: whitesmoke;
+    }
+    img {
+      width: 60%;
+    }
   }
   .form {
     .form_title {
@@ -21,8 +32,8 @@ $main-title-darkgrey: rgb(82, 82, 82);
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding: 8rem 4.5rem;
+    gap: 35px;
+    padding: 5rem 4.5rem;
     .input {
       background: transparent;
       width: 25rem;
@@ -31,11 +42,29 @@ $main-title-darkgrey: rgb(82, 82, 82);
       outline: none;
       border-bottom: 2px solid grey;
       font-size: 15px;
-      text-indent: 6px;
+      text-indent: 10px;
+      font-weight: 600;
+      font-family: "Roboto", "sans-serif";
+      color: $main-title-grey;
+      &::placeholder {
+        font-weight: 200;
+        font-family: "Roboto", "sans-serif";
+      }
+      transition: all 0.1s ease-in-out;
+      &:focus {
+        border-bottom: 2px solid $main-bg-green;
+      }
     }
     .form_submit_btn {
       width: 250px;
-      height: 40px;
+      height: 50px;
+      border-radius: 20px;
+      border: none;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background: $main-bg-green;
+      }
     }
   }
 }
