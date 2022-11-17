@@ -18,39 +18,30 @@ const UserSignIn = () => {
 
   const updateUser = (key: string, value: any) => {
     setUser({ ...user, [key]: value });
+    console.log(user);
   };
 
-  const sendForm = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const { firstname, lastname, address, email, password, dateofbirth } =
-      event.target as typeof event.target & {
-        firstname: { value: string };
-        lastname: { value: string };
-        address: { value: string };
-        email: { value: string };
-        password: { value: string };
-        dateofbirth: { value: Date };
-      };
-    await fetch("http://localhost:8080/springbank/usersignin", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        firstname: firstname.value,
-        lastname: lastname.value,
-        address: address.value,
-        email: email.value,
-        password: password.value,
-        dateofbirth: dateofbirth.value,
-      }),
-    });
+  const sendForm = async () => {
+    const response = await fetch(
+      "http://localhost:8080/springbank/usersignin",
+      {
+        method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
+    console.log(response.json());
+    return response.json();
   };
   const [showPassword, setShowPassword] = useState(true);
 
-  const hideshowPassword = () => {
+  const hideshowPassword = (e: any) => {
     setShowPassword((prevState) => !prevState);
+    e.preventDefault();
   };
 
   return (
