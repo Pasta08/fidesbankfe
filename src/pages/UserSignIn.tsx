@@ -7,6 +7,19 @@ import "../Styles/UserSignIn.css";
 import { Link } from "react-router-dom";
 import Layout from "../components/common/Layout";
 const UserSignIn = () => {
+  const [user, setUser] = useState({
+    firstname: "",
+    lastname: "",
+    address: "",
+    email: "",
+    password: "",
+    dateofbirth: "",
+  });
+
+  const updateUser = (key: string, value: any) => {
+    setUser({ ...user, [key]: value });
+  };
+
   const sendForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -56,6 +69,7 @@ const UserSignIn = () => {
           className="input "
           placeholder="Firstname"
           name="firstname"
+          onChange={(e) => updateUser("firstname", e.target.value)}
         />
 
         <input
@@ -63,6 +77,7 @@ const UserSignIn = () => {
           className="input "
           placeholder="Lastname"
           name="lastname"
+          onChange={(e) => updateUser("lastname", e.target.value)}
         />
 
         <input
@@ -70,6 +85,7 @@ const UserSignIn = () => {
           className="input "
           placeholder="Address"
           name="address"
+          onChange={(e) => updateUser("address", e.target.value)}
         />
 
         <input
@@ -77,6 +93,7 @@ const UserSignIn = () => {
           className="input email"
           placeholder="Email"
           name="email"
+          onChange={(e) => updateUser("email", e.target.value)}
         />
 
         <input
@@ -84,6 +101,7 @@ const UserSignIn = () => {
           className="input "
           placeholder="Password"
           name="password"
+          onChange={(e) => updateUser("password", e.target.value)}
         />
         <button className="password_show_btn" onClick={hideshowPassword}>
           {showPassword ? <AiFillEye /> : <AiOutlineEyeInvisible />}
