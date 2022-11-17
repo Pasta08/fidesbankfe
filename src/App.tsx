@@ -1,5 +1,4 @@
 import "./Styles/App.css";
-import Navbar from "./components/common/Navbar";
 import Home from "./pages/Home";
 import OperatorLogIn from "./pages/OperatorLogIn";
 import UserLogIn from "./pages/UserLogIn";
