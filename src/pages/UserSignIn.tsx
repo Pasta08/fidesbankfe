@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import type { FormEvent } from "react";
+import "../Styles/UserSignIn.css";
 const UserSignIn = () => {
   const sendForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -13,7 +14,7 @@ const UserSignIn = () => {
         password: { value: string };
         dateofbirth: { value: Date };
       };
-    await fetch("/usersignin", {
+    await fetch("http://localhost:8080/usersignin", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -30,41 +31,50 @@ const UserSignIn = () => {
   };
 
   return (
-    <div>
-      <form className="form" autoComplete="off">
+    <div className="form_page">
+      <div className="form_image"></div>
+      <form className="form" autoComplete="off" onSubmit={sendForm}>
+        <h1 className="form_title">User SignIn</h1>
         <input
           type="text"
-          className="form--firstname"
+          className="input "
           placeholder="Firstname"
           name="firstname"
         />
+
         <input
           type="text"
-          className="form--lastname"
+          className="input "
           placeholder="Lastname"
           name="lastname"
         />
+
         <input
           type="text"
-          className="form--address"
+          className="input "
           placeholder="Address"
           name="address"
         />
+
         <input
           type="text"
-          className="form--email"
+          className="input "
           placeholder="Email"
           name="email"
         />
+
         <input
           type="password"
-          className="form--password"
+          className="input "
           placeholder="Password"
           name="password"
         />
-        <input type="date" className="form--dateofbirth" name="dateofbirth" />
 
-        <button className="login--button">submit</button>
+        <input type="date" className="input " name="dateofbirth" />
+
+        <button className="login--button" type="submit">
+          submit
+        </button>
       </form>
     </div>
   );
