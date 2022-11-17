@@ -2,6 +2,7 @@ $main-bg-green: lightgreen;
 $main-bg-darkgreen: rgb(112, 230, 112);
 $main-title-grey: grey;
 $main-title-darkgrey: rgb(82, 82, 82);
+$error-main-red: #ef233c;
 
 .form_page {
   width: 100%;
@@ -9,7 +10,7 @@ $main-title-darkgrey: rgb(82, 82, 82);
   display: flex;
   .form_image {
     width: 50%;
-    background: lightgreen;
+    background: #90ee90;
     display: flex;
     gap: 57px;
     flex-direction: column;
@@ -55,6 +56,11 @@ $main-title-darkgrey: rgb(82, 82, 82);
       transition: all 0.1s ease-in-out;
       &:focus {
         border-bottom: 2px solid $main-bg-green;
+      }
+    }
+    .input.email {
+      &:invalid {
+        border-bottom: 2px solid #ef233c;
       }
     }
     .form_submit_btn {

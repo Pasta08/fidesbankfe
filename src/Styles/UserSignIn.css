@@ -8,7 +8,7 @@
 
 .form_page .form_image {
   width: 50%;
-  background: lightgreen;
+  background: #90ee90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,6 +93,10 @@
 
 .form_page .form .input:focus {
   border-bottom: 2px solid lightgreen;
+}
+
+.form_page .form .input.email:invalid {
+  border-bottom: 2px solid #ef233c;
 }
 
 .form_page .form .form_submit_btn {
