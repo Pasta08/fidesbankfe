@@ -36,7 +36,7 @@ const UserSignIn = () => {
   return (
     <div className="form_page">
       <div className="form_image">
-        <h1>FIDESBANK</h1>
+        <h1>WELCOME</h1>
         <img src="/images/HousingAffordability.svg" alt="image" />
         <Link to="/"> </Link>
       </div>
