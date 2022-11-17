@@ -1,18 +1,49 @@
 .form_page {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .form_page .form_image {
   width: 50%;
   background: lightgreen;
 }
+
 .form_page .form {
+  background: whitesmoke;
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
   padding: 8rem 4.5rem;
 }
+
 .form_page .form .form_title {
   font-family: "Poppins", "sans-serif";
-}/*# sourceMappingURL=UserSignIn.css.map */
+  font-size: 25px;
+  color: grey;
+}
+
+.form_page .form .input {
+  background: transparent;
+  width: 25rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid grey;
+  font-size: 15px;
+  text-indent: 6px;
+}
+
+.form_page .form .form_submit_btn {
+  width: 250px;
+  height: 40px;
+}
+/*# sourceMappingURL=UserSignIn.css.map */
