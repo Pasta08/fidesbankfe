@@ -1,3 +1,5 @@
+import bankImage from "/images/HousingAffordability.svg";
+import bankImage2 from "/images/TransactionalSms.svg";
 import React, { useState } from "react";
 import type { FormEvent } from "react";
 import "../Styles/UserSignIn.css";
