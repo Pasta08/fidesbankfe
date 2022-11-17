@@ -21,23 +21,24 @@ const UserSignIn = () => {
     console.log(user);
   };
 
-  const sendForm = async () => {
-    const response = await fetch(
-      "http://localhost:8080/springbank/usersignin",
-      {
-        method: "POST",
-        mode: "no-cors",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    );
-    console.log(response.json());
-    return response.json();
+  const sendForm = async (event: any) => {
+    event.preventDefault();
+    fetch("http://localhost:8080/springbank/usersignin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .then((error) => {
+        console.log("Error", error);
+      });
   };
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   const hideshowPassword = (e: any) => {
     setShowPassword((prevState) => !prevState);
