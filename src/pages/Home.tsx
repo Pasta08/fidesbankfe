@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <Layout>
-      <div>
-        <h1>Fides Bank motafaka</h1>
-        <div className="btn_section">
-          <Link to="/operatorlogin" className="btns">
-            Operator LogIn
-          </Link>
-          <Link to="/userlogin" className="btns">
-            User LogIn
-          </Link>
+      <div className="container">
+        <div className="landing-image"></div>
+        <div className="landing">
+          <h1>Fides Bank</h1>
+          <div className="btns_section">
+            <Link to="/operatorlogin" className="btns">
+              OperatorLogIn
+            </Link>
+            <Link to="/userlogin" className="btns">
+              UserLogIn
+            </Link>
+          </div>
         </div>
-        <Link to="/usersignin">Register</Link>
       </div>
     </Layout>
   );
