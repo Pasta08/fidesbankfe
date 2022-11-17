@@ -32,6 +32,11 @@ const UserSignIn = () => {
       }),
     });
   };
+  const [showPassword, setShowPassword] = useState(true);
+
+  const hideshowPassword = () => {
+    setShowPassword((prevState) => !prevState);
+  };
 
   return (
     <div className="form_page">
@@ -71,11 +76,15 @@ const UserSignIn = () => {
         />
 
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           className="input "
           placeholder="Password"
           name="password"
         />
+        <button
+          className="password_show_btn"
+          onClick={hideshowPassword}
+        ></button>
 
         <input type="date" className="input " name="dateofbirth" />
 

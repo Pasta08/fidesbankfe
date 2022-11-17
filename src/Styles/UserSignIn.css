@@ -95,6 +95,14 @@
   border-bottom: 2px solid lightgreen;
 }
 
+.form_page .form .password_show_btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 250px;
+  right: 330px;
+}
+
 .form_page .form .input.email:invalid {
   border-bottom: 2px solid #ef233c;
 }

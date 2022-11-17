@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const OperatorLogIn = () => {
   const fetchUserData = async () => {
-    fetch("http://localhost:8080/users")
+    fetch("http://localhost:8080/springbank/funziona")
       .then((response) => response.json())
       .then((data) => console.log(data));
   };
