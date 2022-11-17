@@ -35,6 +35,18 @@
   width: 60%;
 }
 
+.form_page .form_image .return_btn {
+  width: 50px;
+  height: 50px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: grey;
+}
+
 .form_page .form {
   background: whitesmoke;
   width: 50%;
@@ -101,6 +113,10 @@
   position: absolute;
   bottom: 250px;
   right: 330px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: grey;
 }
 
 .form_page .form .input.email:invalid {

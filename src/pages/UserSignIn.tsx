@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiFillEye } from "react-icons/ai";
 import { FaArrowLeft } from "react-icons/fa";
 import type { FormEvent } from "react";
 import "../Styles/UserSignIn.css";
@@ -17,7 +19,7 @@ const UserSignIn = () => {
         password: { value: string };
         dateofbirth: { value: Date };
       };
-    await fetch("http://localhost:8080/usersignin", {
+    await fetch("http://localhost:8080/springbank/usersignin", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -43,7 +45,9 @@ const UserSignIn = () => {
       <div className="form_image">
         <h1>WELCOME</h1>
         <img src="/images/HousingAffordability.svg" alt="image" />
-        <Link to="/"> </Link>
+        <Link to="/" className="return_btn">
+          <FaArrowLeft />
+        </Link>
       </div>
       <form className="form" autoComplete="off" onSubmit={sendForm}>
         <h1 className="form_title">User SignIn</h1>
@@ -81,10 +85,9 @@ const UserSignIn = () => {
           placeholder="Password"
           name="password"
         />
-        <button
-          className="password_show_btn"
-          onClick={hideshowPassword}
-        ></button>
+        <button className="password_show_btn" onClick={hideshowPassword}>
+          {showPassword ? <AiFillEye /> : <AiOutlineEyeInvisible />}
+        </button>
 
         <input type="date" className="input " name="dateofbirth" />
 

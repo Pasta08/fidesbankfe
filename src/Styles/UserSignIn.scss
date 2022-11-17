@@ -24,6 +24,16 @@ $error-main-red: #ef233c;
     img {
       width: 60%;
     }
+    .return_btn {
+      width: 50px;
+      height: 50px;
+      background: white;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 20px;
+      color: $main-title-grey;
+    }
   }
   .form {
     .form_title {
@@ -64,6 +74,10 @@ $error-main-red: #ef233c;
       position: absolute;
       bottom: 250px;
       right: 330px;
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      color: $main-title-grey;
     }
     .input.email {
       &:invalid {
