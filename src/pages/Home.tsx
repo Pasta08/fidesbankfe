@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <Layout>
       <div className="container">
-        <div className="landing-image"></div>
+        <div className="landing-image">
+          <img src="/images/TransactionalSms.svg" alt="image" />
+        </div>
         <div className="landing">
           <h1>Fides Bank</h1>
           <div className="btns_section">
@@ -18,6 +20,12 @@ const Home = () => {
               UserLogIn
             </Link>
           </div>
+          <span>
+            Don't have an account?
+            <Link to="/usersignin" className="btns">
+              SignUp
+            </Link>
+          </span>
         </div>
       </div>
     </Layout>
