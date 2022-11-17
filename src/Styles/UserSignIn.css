@@ -43,7 +43,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 35px;
+  gap: 40px;
   padding: 5rem 4.5rem;
 }
 
@@ -60,7 +60,7 @@
   border: none;
   outline: none;
   border-bottom: 2px solid grey;
-  font-size: 15px;
+  font-size: 17px;
   text-indent: 10px;
   font-weight: 600;
   font-family: "Roboto", "sans-serif";
@@ -94,9 +94,12 @@
 }
 
 .form_page .form .form_submit_btn {
-  width: 250px;
-  height: 50px;
+  width: 25rem;
+  height: 60px;
   border-radius: 20px;
+  font-family: "Poppins", "sans-serif";
+  font-size: 18px;
+  color: grey;
   border: none;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -105,5 +108,6 @@
 
 .form_page .form .form_submit_btn:hover {
   background: lightgreen;
+  color: white;
 }
 /*# sourceMappingURL=UserSignIn.css.map */

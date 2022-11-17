@@ -80,7 +80,7 @@ const UserSignIn = () => {
         <input type="date" className="input " name="dateofbirth" />
 
         <button className="form_submit_btn" type="submit">
-          submit
+          Sign up
         </button>
       </form>
     </div>

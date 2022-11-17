@@ -32,7 +32,7 @@ $main-title-darkgrey: rgb(82, 82, 82);
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 40px;
     padding: 5rem 4.5rem;
     .input {
       background: transparent;
@@ -41,7 +41,7 @@ $main-title-darkgrey: rgb(82, 82, 82);
       border: none;
       outline: none;
       border-bottom: 2px solid grey;
-      font-size: 15px;
+      font-size: 17px;
       text-indent: 10px;
       font-weight: 600;
       font-family: "Roboto", "sans-serif";
@@ -56,14 +56,18 @@ $main-title-darkgrey: rgb(82, 82, 82);
       }
     }
     .form_submit_btn {
-      width: 250px;
-      height: 50px;
+      width: 25rem;
+      height: 60px;
       border-radius: 20px;
+      font-family: "Poppins", "sans-serif";
+      font-size: 18px;
+      color: $main-title-grey;
       border: none;
       transition: all 0.1s ease-in-out;
       cursor: pointer;
       &:hover {
         background: $main-bg-green;
+        color: white;
       }
     }
   }
