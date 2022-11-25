@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import Layout from "../components/common/Layout";
 
 const OperatorPage = () => {
-	const [allUserData, setAllUserData] = useState({});
+	const [allUserData, setAllUserData] = useState([]);
 
 	const fetchUserData = () => {
 		let url: string =
@@ -19,10 +20,25 @@ const OperatorPage = () => {
 			.then((data) => setAllUserData(data));
 	};
 
+	const users = allUserData.map((user: any) => {
+		return (
+			<div key={user.idUser}>
+				<span> {user.firstName}</span>
+				<span> {user.lastName}</span>
+				<span> {user.email} </span>
+				<span> {user.idUser}</span>
+			</div>
+		);
+	});
+
 	useEffect(() => fetchUserData, []);
 	console.log(allUserData);
 
-	return <div>OperatorPage</div>;
+	return (
+		<Layout>
+			<div>{users}</div>
+		</Layout>
+	);
 };
 
 export default OperatorPage;
