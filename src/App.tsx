@@ -4,11 +4,13 @@ import OperatorLogIn from "./pages/OperatorLogIn";
 import UserLogIn from "./pages/UserLogIn";
 import UserSignIn from "./pages/UserSignIn";
 import OperatorPage from "./pages/OperatorPage";
+import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
 	return (
 		<div className="App">
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/home" element={<Home />} />

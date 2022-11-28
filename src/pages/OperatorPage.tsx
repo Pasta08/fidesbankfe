@@ -21,24 +21,13 @@ const OperatorPage = () => {
 	};
 
 	const users = allUserData.map((user: any) => {
-		return (
-			<div key={user.idUser}>
-				<span> {user.firstName}</span>
-				<span> {user.lastName}</span>
-				<span> {user.email} </span>
-				<span> {user.idUser}</span>
-			</div>
-		);
+		return <div key={user.idUser}>{user.firstName}</div>;
 	});
 
 	useEffect(() => fetchUserData, []);
 	console.log(allUserData);
 
-	return (
-		<Layout>
-			<div>{users}</div>
-		</Layout>
-	);
+	return <Layout>{users}</Layout>;
 };
 
 export default OperatorPage;
