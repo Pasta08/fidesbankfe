@@ -24,7 +24,8 @@ const UserLogIn = () => {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				console.log("Success:", data);
+				sessionStorage.setItem("user", data.accessToken);
+				console.log(sessionStorage.getItem("user"));
 			})
 			.then((error) => {
 				console.log("Error", error);
