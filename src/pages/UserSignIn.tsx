@@ -33,10 +33,11 @@ const UserSignIn = () => {
 		)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log("Success:", data);
-			})
-			.then((error) => {
-				console.log("Error", error);
+				try {
+					console.log("Success:", data);
+				} catch (error) {
+					console.log("Error: " + error);
+				}
 			});
 	};
 	const [showPassword, setShowPassword] = useState(false);
