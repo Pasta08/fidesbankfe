@@ -1,0 +1,29 @@
+
+$main-bg-green : lightgreen;
+$error-main-red: rgb(253, 34, 34);
+
+.form{
+    width: 23%;
+    height: 10%;
+    display: flexbox;
+    flex-direction: column-reverse;
+    justify-self: unset;
+    align-items: center;
+    display: flex;
+    justify-content: safe;
+    margin: 5mm;
+    
+    button {
+        margin: 5mm;
+        color: rgb(218, 211, 211);
+    }
+
+  .div{
+     font: 1em sans-serif;
+     width: fit-content;
+     margin: 2%;
+     min-width: 3px;
+     mix-blend-mode: difference;
+     table-layout: $main-bg-green =green;
+  }
+}
