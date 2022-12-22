@@ -1,0 +1,143 @@
+.form_page {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form_page .form_image {
+  width: 50%;
+  background: #90ee90;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 57px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.form_page .form_image h1 {
+  color: #f5f5f5;
+  font-size: 50px;
+}
+
+.form_page .form_image img {
+  width: 60%;
+}
+
+.form_page .form_image .return_btn {
+  width: 50px;
+  height: 50px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: grey;
+}
+
+.form_page .form {
+  background: whitesmoke;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  padding: 5rem 4.5rem;
+}
+
+.form_page .form .form_title {
+  font-family: "Poppins", "sans-serif";
+  font-size: 25px;
+  color: grey;
+}
+
+.form_page .form .input {
+  background: transparent;
+  width: 25rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid grey;
+  font-size: 17px;
+  text-indent: 10px;
+  font-weight: 600;
+  font-family: "Roboto", "sans-serif";
+  color: grey;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.form_page .form .input::-webkit-input-placeholder {
+  font-weight: 200;
+  font-family: "Roboto", "sans-serif";
+}
+
+.form_page .form .input:-ms-input-placeholder {
+  font-weight: 200;
+  font-family: "Roboto", "sans-serif";
+}
+
+.form_page .form .input::-ms-input-placeholder {
+  font-weight: 200;
+  font-family: "Roboto", "sans-serif";
+}
+
+.form_page .form .input::placeholder {
+  font-weight: 200;
+  font-family: "Roboto", "sans-serif";
+}
+
+.form_page .form .input:focus {
+  border-bottom: 2px solid lightgreen;
+}
+
+.form_page .form .password_show_btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 250px;
+  right: 330px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: grey;
+}
+
+.form_page .form .input.email:invalid {
+  border-bottom: 2px solid #ef233c;
+}
+
+.form_page .form .form_submit_btn {
+  width: 25rem;
+  height: 60px;
+  border-radius: 20px;
+  font-family: "Poppins", "sans-serif";
+  font-size: 18px;
+  color: grey;
+  border: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.form_page .form .form_submit_btn:hover {
+  background: lightgreen;
+  color: white;
+}
+/*# sourceMappingURL=UserSignIn.css.map */
